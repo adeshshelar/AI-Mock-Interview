@@ -1,9 +1,10 @@
 "use client"
 
 import { UserButton } from '@clerk/nextjs'
-import Image from 'next/image'
+
 import { usePathname } from 'next/navigation'
 import React, { useEffect } from 'react'
+import InterviewList from './InterviewList.jsx';
 
 function Header() {
 
@@ -13,14 +14,9 @@ function Header() {
     },[]);
 
   return (
-    <div className='flex p-4 items-center justify-between bg-secondary shadow-md'>
-        <Image src={'/logo.svg'} width={160} height={100} alt='logo'/>
-        <ul className='hidden md:flex gap-6'>
-            <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer ${path=='/dashboard'&&'text-primary font-bold'}`}>Dashboard</li>
-            <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer ${path=='/dashboard/questions'&&'text-primary font-bold'}`}>Questions</li>
-            <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer ${path=='/dashboard/upgrade'&&'text-primary font-bold'}`}>Upgrade</li>
-            <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer ${path=='/dashboard/how'&&'text-primary font-bold'}`}>How it works?</li>
-        </ul>
+    <div className='flex p-3 items-center justify-between shadow-md'>
+        <h2 className='font-extrabold py-2 ml-6 text-2xl'>QuickMock</h2>
+
         <UserButton/>
     </div>
   )

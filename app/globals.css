@@ -17,13 +17,40 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-poppins);
+  
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+  .wrapper {
+    @apply max-w-7xl lg:mx-auto p-5 md:px-10 xl:px-0 w-full;
+  }
+
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+
+  
+  .h1-bold {
+    @apply font-extrabold text-[40px] leading-[48px] lg:text-[48px] lg:leading-[60px]  xl:text-[50px] xl:leading-[69px];
+  }
+
+  .p-regular-24 {
+    @apply font-normal text-[24px] leading-[36px];
+  }
+
+  .p-regular-20 {
+    @apply text-[20px] font-normal leading-[30px] tracking-[2%];
+  }
+
+  
 }
 
 @layer base {
