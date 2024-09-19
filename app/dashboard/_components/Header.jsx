@@ -1,10 +1,10 @@
 "use client"
 
 import { UserButton } from '@clerk/nextjs'
+import Image from 'next/image';
 
 import { usePathname } from 'next/navigation'
 import React, { useEffect } from 'react'
-import InterviewList from './InterviewList.jsx';
 
 function Header() {
 
@@ -14,10 +14,13 @@ function Header() {
     },[]);
 
   return (
-    <div className='flex p-3 items-center justify-between shadow-md'>
-        <h2 className='font-extrabold py-2 ml-6 text-2xl'>QuickMock</h2>
+    <div className='flex p-3 items-center justify-between shadow-lg mx-7 my-5'>
+        <Image src={'/logo.png'} className='mx-8' width={220} height={120}/>
 
-        <UserButton/>
+        <div className='mx-8'>
+        <UserButton />
+        </div>
+        
     </div>
   )
 }
