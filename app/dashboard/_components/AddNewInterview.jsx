@@ -80,14 +80,14 @@ function AddNewInterview() {
       <Dialog open={openDailog} onOpenChange={setOpenDailog}>
         <DialogContent className='max-w-2xl bg-white dark:bg-gray-800 shadow-lg '>
           <DialogHeader>
-            <DialogTitle className='text-2xl'>Tell us more about your job interview</DialogTitle>
+            <DialogTitle className='text-2xl font-extrabold '>Tell us more about your job interview</DialogTitle>
             <DialogDescription>
               <form onSubmit={onSubmit}>
                 <div>
                   <h2>Add details about your job position/role, Job description, and years of experience.</h2>
 
                   <div className='mt-7 my-3'>
-                    <label>Job Role/Job Position</label>
+                    <label className='font-extrabold'>Job Role/Job Position</label>
                     <Input
                       placeholder='Ex. Full Stack Developer'
                       required
@@ -96,7 +96,7 @@ function AddNewInterview() {
                   </div>
 
                   <div className='my-3'>
-                    <label>Job Description/Tech Stack (In Short)</label>
+                    <label  className='font-extrabold'>Job Description/Tech Stack (In Short)</label>
                     <Textarea
                       placeholder='Ex. React, Express, MySql, NodeJS etc.'
                       required
@@ -105,7 +105,7 @@ function AddNewInterview() {
                   </div>
 
                   <div className='my-3'>
-                    <label>Years of Experience</label>
+                    <label  className='font-extrabold'>Years of Experience</label>
                     <Input
                       placeholder='Ex.5'
                       type="number"
@@ -120,7 +120,7 @@ function AddNewInterview() {
                   <Button type='button' variant="ghost" onClick={() => setOpenDailog(false)}>
                     Cancel
                   </Button>
-                  <Button type='submit' disabled={loading}>
+                  <Button className="rounded-full" type='submit' disabled={loading}>
                     {loading ? (
                       <>
                         <LoaderCircle className='animate-spin' /> Generating from AI

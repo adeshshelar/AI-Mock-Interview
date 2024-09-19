@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
-       <html lang="en" style={{background: "linear-gradient(115deg, #ffffff, #d4dfed)"}}>
+       <html lang="en">
           <body className={inter.className} >
             <Toaster />
             {children}
