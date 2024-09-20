@@ -14,13 +14,13 @@ function Header() {
     },[]);
 
   return (
-    <div className='flex p-3 items-center justify-between shadow-lg mx-7 my-5'>
-        <Image src={'/logo.png'} className='mx-8' width={220} height={120}/>
+    <div className='flex p-3 items-center justify-between shadow-xl mx-9 mt-6 border-t-8 border-purple-600'>
+        <Image src={'/logo.png'} className='mx-8' width={200} height={140}/>
 
         <div className='mx-8'>
         <UserButton />
         </div>
-        
+       
     </div>
   )
 }

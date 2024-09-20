@@ -8,7 +8,6 @@ import Image from 'next/image';
 function Dashboard() {
   return (
 
-  
     <section  className=" py-5 md:py-10 ">
     <div className="wrapper grid grid-cols-1 gap-5 md:grid-cols-2 2xl:gap-0">
       <div className="flex flex-col justify-center gap-8">
@@ -20,8 +19,7 @@ function Dashboard() {
       </div>
 
       <Image
-        src="/front-img.png"
-        alt="hero"
+        src="/front.jpeg"
         width={1500}
         height={1000}
         className="max-h-[70vh] object-contain object-center 2xl:max-h-[50vh]"
@@ -29,11 +27,9 @@ function Dashboard() {
     </div>
   </section> 
 
-
       // <InterviewList />
     
   
-    
   );
 }
 
