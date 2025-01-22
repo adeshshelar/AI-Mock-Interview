@@ -4,24 +4,11 @@ import AddNewInterview from './_components/AddNewInterview';
 import InterviewList from './_components/InterviewList';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
-import { UserButton } from '@clerk/nextjs'
 
 function Dashboard() {
   return (
-    <div>
-   <header>
-  <div className="flex items-center justify-between shadow-xl mx-2 sm:mx-9 mt-6 border-t-8 border-purple-600 p-3">
-    {/* Logo */}
-    <Image src={'/logo.png'} className="mx-2 sm:mx-8" width={150} height={100} alt="Logo" />
 
-    {/* UserButton on the right */}
-    <div>
-      <UserButton />
-    </div>
-  </div>
-</header>
-
-    <section  className=" py-5 md:py-10  ">
+    <section  className=" py-5 md:py-10 ">
     <div className="wrapper grid grid-cols-1 gap-5 md:grid-cols-2 2xl:gap-0">
       <div className="flex flex-col justify-center gap-8">
         <h1 className="h1-bold">Your Interview Coach, Level Up with AI Mock Interviews</h1>
@@ -40,10 +27,8 @@ function Dashboard() {
     </div>
   </section> 
 
-
-    </div>
-
-   
+      // <InterviewList />
+    
   
   );
 }
